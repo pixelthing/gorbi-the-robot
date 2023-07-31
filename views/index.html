@@ -1,0 +1,70 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gorbi</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://scontent-ams3-1.xx.fbcdn.net/v/t31.0-8/24837294_1737068726364491_4147483854759838948_o.jpg?oh=e124ee0f6ea9b439d489573c7d0132bd&oe=5A8F7D69" type="image/jpeg">
+    <link href="https://scontent-ams3-1.xx.fbcdn.net/v/t31.0-8/24837294_1737068726364491_4147483854759838948_o.jpg?oh=e124ee0f6ea9b439d489573c7d0132bd&oe=5A8F7D69" rel="apple-touch-icon" type="image/jpeg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Gorbi - for Iris
+      </h1>
+    </header>
+
+    <main onclick="">
+    </main>
+    
+    <label for="modal" style="position:absolute; top:10px; right:10px;">more</label>
+    <input type="checkbox" id="modal" value="1" />
+    <aside>
+      <button type="button" id="goFS">Go fullscreen</button>
+      <header>
+        <h2>
+          Experimental face detection
+        </h2>
+        <p>
+          You can enable face detection on recent versions of Chrome, so that Gorbi's eyes follow you left to right. Yu'll need Chrome 58 or later and ypu'll need to enable <a href="chrome://flags/#enable-experimental-web-platform-features">chrome://flags/#enable-experimental-web-platform-features</a>. Clicking "grab video" below will then ask for access to your camera.
+        </p>
+        <button type="button" class="btn btn-lg btn-default" onclick="getStream()">Grab video</button>
+        <button type="button" class="btn btn-lg btn-default" onclick="killStream()">stop video</button>
+        <label for="modal" style="position:absolute; top:10px; right:10px;">X</label>
+      </header>
+      <span>
+        <video autoplay></video>
+        video
+      </span>
+      <span>
+        <img id="imageTag" width="240" height="180">
+        still capture
+        <canvas id="canvas" width="640" height="480"></canvas>
+      </span>
+    </aside>
+
+    <footer>
+      <a href="https://glitch.com">
+        Remix this in Glitch
+      </a>
+    </footer>
+
+    <script src="/gorbi.js"></script>
+    <script src="/image-capture.js"></script>
+    <script src="/face-detection.js"></script>
+
+  </body>
+</html>

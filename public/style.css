@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 1vw;
+    margin: 0;
+    font-family: avenir, "sergoe UI", sans-serif;
+    background: #628E77 url(https://cdn.glitch.com/bb99247c-e719-487c-b89a-8c42977b7409%2Fgorbi.png?1513071216922);
+  }
+  header,
+  footer {
+    display: none;
+  }
+  
+  main {
+    display: grid;
+    width: 98vw;
+    height: calc(15/20 * 98vw);
+    background-color: #000;
+    background-image: radial-gradient(#122 0%, #000 100%);
+    background-size: 4.9vw 4.9vw;
+    background-repeat: repeat;
+    border: 0.7vw solid #73A188;
+    border-color: #4D5953 #4D5953 #73A188 #73A188;
+    border-radius: 2px;
+    grid-template-columns: repeat(20, 4.4vw [col-start]);
+    grid-template-rows: repeat(15, 4.4vw [col-start]);
+    grid-column-gap: 0.5vw;
+    grid-row-gap: 0.5vw;
+  }
+  
+  .dot {
+    background-color: #ff9;
+    background-image: radial-gradient(#ffd 0%, #ff9 50%);
+    border-radius: 100%;
+    box-shadow: 0 0 2vw #ff9;
+  }
+  @media (min-aspect-ratio: 20/15) {
+    body {
+      padding: 1vh;
+    }
+    main {
+      width: calc(20/15 * 98vh);
+      height: 98vh;
+      margin: 0 auto;
+      background-size: 6.56vh 6.56vh;
+      border-width: 0.7vh;
+      grid-template-columns: repeat(20, 6.033vh [col-start]);
+      grid-template-rows: repeat(15, 6.033vh [col-start]);
+      grid-column-gap: 0.5vh;
+      grid-row-gap: 0.5vh;
+    }
+    .dot {
+      box-shadow: 0 0 2vh #ff9;
+    }
+  }
+  
+  input {
+    display: none;
+  }
+  aside {
+    display: none;
+    position:absolute;
+    left: 50%;
+    top: 20px;
+    width: 600px;
+    margin-left: -300px;
+    padding: 20px;
+    color: #fff;
+    background: rgba(0,0,0,0.8);
+    text-align: center;
+  }
+  input:checked+aside {
+    display: block;
+  }
+  @media (max-width: 599px) {
+    aside {
+      left: 10px;
+      right: 10px;
+      margin: 0;
+      width: auto;
+    }
+  }
+  aside header {
+    display: block;
+    padding: 0 20px 20px;
+  }
+  aside span {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+  }
+  video,
+  img,
+  canvas {
+    display: block;
+    height: 180px; 
+    width: 240px;
+    margin: 0 0 5px;
+    border: 1px solid #fff;
+    background-color: #ccc;
+    background-image: repeating-linear-gradient(-45deg,#999,#999 10px,#939393 10px,#939393 20px);
+  }
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+  }
